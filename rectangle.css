@@ -13,3 +13,6 @@ div{
 input,label{
     margin: 5px 0;
 }
+span {
+    color: red;
+  }
