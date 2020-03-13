@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="./rectangle.css">
 </head>
 <body>
-<div>
+<div class="main">
     <label>宽度：</label>
-    <input id="width" type="text" autofocus>
+    <input id="width" type="text">
     <span>*</span>
     <br>
+    <div id="width-validate"></div>
     <lable for="">高度:</lable>
     <input id="height" type="text">
     <span>*</span>
     <br>
+    <div id="height-validate"></div>
     <input id="calculate" type="button" value="计算">
     <br>
     <lable for="">周长:</lable>
@@ -25,10 +27,9 @@
     <input id="area" type="text" disabled>
     <br>
 </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
-    <!-- build:js bundle.min.js -->   
-    <script src="calc.js"></script>
-    <script src="rectangle.js"></script>
-     <!-- endbuild -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
+    <!-- <script src="./rectangle.js"></script>
+    <script src="./calc.js"></script> -->
+    <script src="./bundle.min.js"></script>
 </body>
 </html>

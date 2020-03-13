@@ -5,8 +5,36 @@ $(function(){
             $bthCal = $('#calculate'),
             $perimeter = $('#perimeter'),
             $area = $('#area');
+            $widthValidate = $('#width-validate'),
+            $heightValidate = $('#height-validate'),
+            isPassValidate1 = false;
+            isPassValidate2 = false;
+    $width.focusout(function() {
+        var result = validate($width.val());
+        isPassValidate1 = result.isOK;
+        console.log(isPassValidate1);
+        console.log(isPassValidate2);
+        if(!result.isOK) {
+            $widthValidate.html('宽度' + result.reason);
+            $width.select();
+        } else {
+            $widthValidate.html('');
+        }
+    });
 
+    $height.focusout(function() {
+        var result = validate($height.val());
+        isPassValidate2 = result.isOK;
+        console.log(isPassValidate2);
+        if(!result.isOK) {
+            $heightValidate.html('高度' + result.reason);
+            $height.select();
+        } else {
+            $heightValidate.html('');
+        }
+    });
     $bthCal.click(function(){
+        if(!isPassValidate1 || !isPassValidate2) return;
         //get value
         var w = $width.val(),
             h = $height.val();
