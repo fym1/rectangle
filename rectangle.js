@@ -9,6 +9,8 @@ $(function(){
             $heightValidate = $('#height-validate'),
             isPassValidate1 = false;
             isPassValidate2 = false;
+            $forkMeGH.show('https://github.com/sihan9/rectangle');
+            $bszPageFooter.show('body');
     $width.focusout(function() {
         var result = validate($width.val());
         isPassValidate1 = result.isOK;
