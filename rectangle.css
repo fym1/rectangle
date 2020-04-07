@@ -13,7 +13,7 @@ h1{
 input,label{
     margin: 5px 0;
 }
-span {
+.star {
     color: red;
 }
 #width-validate,
